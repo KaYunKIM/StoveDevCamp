@@ -39,8 +39,18 @@
 
 
 
-
-
 ### Tip!
 
 Vue 개발 시 태그 자동완성기능을 위해 왼쪽 바 맨 밑에 Extenstions에서 Vetur를 설치하면 훨씬 편하다!
+
+
+
+### vuex/router 설치
+
+> vue/cli 사용시에는 vue add로 설치할 것!
+
+```
+> vue add vuex router
+```
+
+*npm i vuex 설치 후에도 자동생성이 안된다면, vue add 사용
