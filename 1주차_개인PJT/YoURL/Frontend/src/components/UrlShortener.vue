@@ -38,7 +38,8 @@
           ></v-text-field>
 
           <div v-if="urlInfo && newUrlInfo">
-            <a v-bind:href="newUrlInfo"><input id='myUrl'/>{{ newUrlInfo }}</a>
+            <textarea id='myUrl' v-model="newUrlInfo" class="mb-5" cols="40"></textarea>
+            <!-- <a v-bind:href="newUrlInfo">{{ newUrlInfo }}</a> -->
           </div>
           <div v-if="urlStatus == true && newUrlInfo == ''">
             <v-btn
@@ -49,7 +50,7 @@
               CREATE
             </v-btn>
           </div>
-          <div v-else>
+          <div v-if="newUrlInfo">
             <v-btn
               depressed
               color="primary"
@@ -99,7 +100,7 @@ export default {
       const copyURL = document.getElementById("myUrl")
       copyURL.select()
       document.execCommand('copy')
-      alert(copyURL.value + '링크를 복사했습니다.')
+      alert(copyURL.value + ' 링크를 복사했습니다.')
     }
   },
 
