@@ -1,6 +1,6 @@
 - DB모델링
 
-![models](C:\Users\kyunkim\Desktop\DevCamp\1주차_개인프로젝트\yoURL_삽질\Backend\models.JPG)
+![models](models.JPG)
 
 ```
 # manage.py가 있는 위치에서
@@ -30,31 +30,31 @@
 
 > CORS에러는 내 로컬 서버에 외부에서 다른 도메인이 데이터를 요청할 때 허용하지 않아 생기는 오류임
 
-![2](C:\Users\kyunkim\Desktop\DevCamp\1주차_개인프로젝트\yoURL_삽질\Backend\2.JPG)
+![2](2.JPG)
 
 - urls설정
 
 > Project 하위 urls.py에 작성
 
-![url1](C:\Users\kyunkim\Desktop\DevCamp\1주차_개인프로젝트\yoURL_삽질\Backend\url1.JPG)
+![url1](url1.JPG)
 
 > App 하위에 urls.py 생성
 
-![url2](C:\Users\kyunkim\Desktop\DevCamp\1주차_개인프로젝트\yoURL_삽질\Backend\url2.JPG)
+![url2](url2.JPG)
 
 - views.py
 
 > 기존주소를 DB에서 조회 후 없으면 변환해서 저장하기
 
-![views1](C:\Users\kyunkim\Desktop\DevCamp\1주차_개인프로젝트\yoURL_삽질\Backend\views1.JPG)
+![views1](views1.JPG)
 
 > 기존 주소 변환하기
 
-![views2](C:\Users\kyunkim\Desktop\DevCamp\1주차_개인프로젝트\yoURL_삽질\Backend\views2.JPG)
+![views2](views2.JPG)
 
 > 변환주소를 다시 기존주소로 redirect하기
 
-![views3](C:\Users\kyunkim\Desktop\DevCamp\1주차_개인프로젝트\yoURL_삽질\Backend\views3.JPG)
+![views3](views3.JPG)
 
 
 
@@ -64,8 +64,8 @@
 "detail": "Unsupported media type \"text/plain\" in request."
 ```
 
-![postman1](C:\Users\kyunkim\Desktop\DevCamp\1주차_개인프로젝트\yoURL_삽질\Backend\postman1.JPG)
+![postman1](postman1.JPG)
 
 이러한 오류가 발생했을 때, Text를 JSON으로 바꿔주면 된다.
 
-![postman2](C:\Users\kyunkim\Desktop\DevCamp\1주차_개인프로젝트\yoURL_삽질\Backend\postman2.JPG)
+![postman2](postman2.JPG)

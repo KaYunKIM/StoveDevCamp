@@ -6,7 +6,7 @@
 
 
 
-![1](C:\Users\kyunkim\Desktop\DevCamp\1주차_개인프로젝트\yoURL_삽질\Backend\1.PNG)
+![1](1.PNG)
 
 해결방안참고
 
