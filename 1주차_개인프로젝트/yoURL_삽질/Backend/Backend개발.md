@@ -14,7 +14,7 @@
 
 > models.py와 같은 위치에 serializers.py 파일 생성
 
-![serializers](C:\Users\kyunkim\Desktop\DevCamp\1주차_개인프로젝트\yoURL_삽질\Backend\serializers.JPG)
+![serializers](/serializers.JPG)
 
 - DRF 설정
 
