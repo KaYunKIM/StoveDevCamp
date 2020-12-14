@@ -69,3 +69,22 @@
 이러한 오류가 발생했을 때, Text를 JSON으로 바꿔주면 된다.
 
 ![postman2](postman2.JPG)
+
+
+
+
+
+## 설치 package 관리
+
+- 해당 프로젝트를 받아서 바로 실행할 수 있게 모든 설치한 패키치들을 저장
+
+```
+$ pip freeze > requirements.txt
+```
+
+- pull받은 후 모든 패키치 한번에 설치하기(서버 돌리기 전)
+
+```
+$ pip install -r requirements.txt
+```
+
