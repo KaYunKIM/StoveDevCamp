@@ -1,0 +1,66 @@
+## 패키지 설치
+
+- DRF 설정
+
+```
+$ pip install django-rest-framework
+```
+
+- CORS 설정
+
+```
+$ pip install django-cors-headers
+```
+
+- Auth 설정
+
+```
+$ pip install django-rest-auth
+```
+
+
+
+## User모델
+
+- User모델을 확장하기 위한 방법으로는 4가지가 있다.
+
+  > https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html
+
+1. Proxy Model: User 모델 그대로 사용
+2. User Profile: User 모델 사용 + 인증과 무관한 정보 추가
+3. AbstractUser: USer 모델 그대로 사용(인증기능)+ 필드 커스텀 가능
+4. AbstractBaseUser: 자체 인증기능 구현 + 필드를 커스텀할 때 사용
+
+
+
+- Django 내부 User모델을 사용할 수 있지만, 추후 모델을 수정할 때 코드의 많은 부분을 고쳐야 하므로 유연성이 떨어짐
+
+  >  https://devlog.jwgo.kr/2020/05/14/recommended-refer-user-model-in-django/
+
+  =>  AbstractUser 모델 사용 추천
+
+  
+
+### AbstractUser 모델
+
+- Django의 User 모델을 그대로 사용할 수 있어 Django 내부 기본 인증 처리 부분을 이용하면 필요한 필드를  커스텀하여 추가할 수 있음
+
+- AbstractUser 모델은 반드시 프로젝트 시작전에 사용할 것! 
+
+- settings.py에서 참조를 수정하기 위해  AUTH_USER_MODEL 선언 후 사용
+
+  ```
+  AUTH_USER_MODEL = "app이름.class이름"
+  ```
+
+- 이후 migration 실행
+
+  ```
+  $ python manage.py makemigrations
+  $ python manage.py migrate
+  ```
+
+  
+
+
+
