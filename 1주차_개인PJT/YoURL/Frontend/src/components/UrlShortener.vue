@@ -38,7 +38,12 @@
           ></v-text-field>
 
           <div v-if="urlInfo && newUrlInfo">
-            <textarea id='myUrl' v-model="newUrlInfo" class="mb-5" cols="40"></textarea>
+            <v-text-field
+            id='myUrl'
+            v-model="newUrlInfo"
+            filled
+            rounded
+          ></v-text-field>
             <!-- <a v-bind:href="newUrlInfo">{{ newUrlInfo }}</a> -->
           </div>
           <div v-if="urlStatus == true && newUrlInfo == ''">
