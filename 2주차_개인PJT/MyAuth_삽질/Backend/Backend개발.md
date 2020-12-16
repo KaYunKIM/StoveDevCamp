@@ -137,23 +137,13 @@ $ pip install django-rest-framework
 
 
 
-
-
-## 회원가입
+## 추가 User 모델 활용
 
 ### views.py
 
 - 우리가 커스텀한 User모델을 쓰기위해서는 User 모델에 바로 접근하는 것이 아니라 get_user_model을 import 해서 User 변수로 정의해서 사용함 
 
 ![3](C:\Users\kyunkim\Desktop\StoveDevCamp\2주차_개인PJT\MyAuth_삽질\Backend\3.PNG)
-
-
-
-
-
-
-
-## 로그인
 
 
 
