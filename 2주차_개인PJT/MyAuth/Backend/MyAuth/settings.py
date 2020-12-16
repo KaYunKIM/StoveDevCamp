@@ -37,8 +37,25 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts'
+    'django.contrib.sites', #Auth(signup/social)
+
+    #app
+    'accounts',
+
+    #DRF
+    'rest_framework',
+    'rest_framework.authtoken',
+
+    #Auth(login/logout)
+    'rest_auth', 
+    #Auth(signup/social)
+    'allauth',  
+    'allauth.account',
+    'rest_auth.registration',
+    
 ]
+
+SITE_ID = 1 #Auth(signup/social)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
