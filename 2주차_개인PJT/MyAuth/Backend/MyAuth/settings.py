@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     #app
     'accounts',
 
+    #CORS
+    # 'corsheaders',
+
     #DRF
     'rest_framework',
     'rest_framework.authtoken',
@@ -58,6 +61,9 @@ INSTALLED_APPS = [
 SITE_ID = 1 #Auth(signup/social)
 
 MIDDLEWARE = [
+    #CORS
+    # 'corsheaders.middleward.CorsMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -136,5 +142,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#CORS conf.
+# CORS_ORIGIN_ALLOW_ALL = True
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES' : [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
 
 AUTH_USER_MODEL = 'accounts.User'

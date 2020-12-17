@@ -2,17 +2,23 @@
 
 ```
 버전확인
-> node -v
+$ node -v
 ```
 
 > 만약  vscode나 bash를 켜놓은 상태에서 node 설치 후 버전 확인하면 "bash: npm: command not found"에러가난다. 이럴때는 그냥 vscode를 끄고 다시 실행하면된다.
+
+npm 업데이트
+
+```
+$ npm install -g npm
+```
 
 
 
 ### 2. CLI 설치
 
 ```
-> npm i -g @vue/cli
+$ npm i -g @vue/cli
 ```
 
 
@@ -20,13 +26,15 @@
 ### 3. 프로젝트 생성
 
 ```
-> vue create {프로젝트 이름}
+$ vue create {프로젝트 이름} #소문자로 쓸 것
 ```
 
 엔터치기
 
+![1](C:\Users\kyunkim\Desktop\StoveDevCamp\1주차_개인PJT\yoURL_삽질\Frontend\1.PNG)
+
 ```
-> cd {프로젝트 이름}
+$ cd {프로젝트 이름}
 ```
 
 
@@ -34,14 +42,22 @@
 ### 4. 실행
 
 ```
-> npm run serve
+$ npm run serve
 ```
 
-
+![2](C:\Users\kyunkim\Desktop\StoveDevCamp\1주차_개인PJT\yoURL_삽질\Frontend\2.PNG)
 
 ### Tip!
 
 Vue 개발 시 태그 자동완성기능을 위해 왼쪽 바 맨 밑에 Extenstions에서 Vetur를 설치하면 훨씬 편하다!
+
+![3](C:\Users\kyunkim\Desktop\StoveDevCamp\1주차_개인PJT\yoURL_삽질\Frontend\3.PNG)
+
+
+
+### 서버 종료
+
+터미널 창에서 ctrl+c 누르기
 
 
 
@@ -50,7 +66,22 @@ Vue 개발 시 태그 자동완성기능을 위해 왼쪽 바 맨 밑에 Extenst
 > vue/cli 사용시에는 vue add로 설치할 것!
 
 ```
-> vue add vuex router
+$ vue add vuex
+$ vue add router
 ```
 
+y 계속 누르기
+
 *npm i vuex 설치 후에도 자동생성이 안된다면, vue add 사용
+
+![4](C:\Users\kyunkim\Desktop\StoveDevCamp\1주차_개인PJT\yoURL_삽질\Frontend\4.PNG)
+
+
+
+*추가적으로 vuetify를 적용한다면,
+
+```
+$ vue add vuetify
+```
+
+![5](C:\Users\kyunkim\Desktop\StoveDevCamp\1주차_개인PJT\yoURL_삽질\Frontend\5.PNG)
