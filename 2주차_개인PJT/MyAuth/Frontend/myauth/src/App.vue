@@ -14,43 +14,34 @@
           transition="scale-transition"
           width="40"
         />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
       </div>
-
       <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      <router-link class="link" to="/signup">SIGNUP<v-icon>mdi-register</v-icon></router-link>
+      <router-link class="link" to="/login">LOGIN<v-icon>mdi-login</v-icon></router-link>
+      <router-link class="link" to="/" @click.native="logout">LOGOUT<v-icon>mdi-logout</v-icon></router-link>
     </v-app-bar>
+    
+    <router-view/>
 
-    <v-main>
+    <!-- <v-main>
       <HelloWorld/>
-    </v-main>
+    </v-main> -->
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+// import HelloWorld from './components/HelloWorld';
+import { mapActions } from 'vuex'
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    // HelloWorld,
+  },
+
+  methods: {
+    ...mapActions(['logout'])
   },
 
   data: () => ({
@@ -58,3 +49,19 @@ export default {
   }),
 };
 </script>
+
+<style>
+#app {
+  margin: 100px;
+}
+.link {
+  color: beige !important;
+  font-weight:bold;
+  /* font-family: "Roboto", sans-serif !important; */
+  margin-right: 10px;
+  
+}
+a {
+  text-decoration: none;
+}
+</style>

@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'accounts',
 
     #CORS
-    # 'corsheaders',
+    'corsheaders',
 
     #DRF
     'rest_framework',
@@ -62,7 +62,7 @@ SITE_ID = 1 #Auth(signup/social)
 
 MIDDLEWARE = [
     #CORS
-    # 'corsheaders.middleward.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -143,13 +143,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#CORS conf.
-# CORS_ORIGIN_ALLOW_ALL = True
+#CORS configuraion
+CORS_ORIGIN_ALLOW_ALL = True
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES' : [
         'rest_framework.authentication.TokenAuthentication',
     ]
 }
+
+ACCOUNT_EMAIL_VERIFICATION = 'optional'
 
 AUTH_USER_MODEL = 'accounts.User'
