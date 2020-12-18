@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form class="form">
     <v-text-field
       v-model="username"
       :error-messages="usernameErrors"
@@ -18,15 +18,21 @@
       @input="$v.password.$touch()"
       @blur="$v.password.$touch()"
     ></v-text-field>
-    <v-btn
-      class="mr-4"
-      @click="submit"
-    >
-      submit
-    </v-btn>
-    <v-btn @click="clear">
-      clear
-    </v-btn>
+    <v-row class="mt-3">
+      <v-btn 
+        class="ml-3" 
+        @click="clear"
+      >
+        clear
+      </v-btn>
+      <v-spacer></v-spacer>
+      <v-btn
+        class="mr-4"
+        @click="submit"
+      >
+        submit
+      </v-btn>
+    </v-row>
   </form>
 </template>
 
@@ -85,3 +91,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.form {
+    margin-top: 200px;
+}
+</style>

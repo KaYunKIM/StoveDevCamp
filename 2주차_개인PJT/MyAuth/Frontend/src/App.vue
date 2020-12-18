@@ -1,0 +1,63 @@
+<template>
+  <v-app>
+    <v-app-bar
+      app
+      color="primary"
+      dark
+    >
+      <div class="d-flex align-center">
+        <router-link to="/">
+          <v-img
+            alt="Vuetify Logo"
+            class="shrink mr-2"
+            contain
+            src="@/assets/logo.png"
+            transition="scale-transition"
+            width="40"
+          />
+        </router-link>
+      </div>
+      <v-spacer></v-spacer>
+      <router-link v-if="!isAuthenticated" class="link" to="/signup">SIGNUP<v-icon class="ml-1">person_add</v-icon></router-link>
+      <router-link v-if="!isAuthenticated" class="link" to="/login">LOGIN<v-icon>mdi-login</v-icon></router-link>
+      <span v-if="isAuthenticated" class="mr-5">Welcome {{this.userData.username}}</span>
+      <router-link v-if="isAuthenticated" class="link" to="/" @click.native="logout">LOGOUT<v-icon>mdi-logout</v-icon></router-link>
+    
+    </v-app-bar>
+    
+    <router-view/>
+  </v-app>
+</template>
+
+<script>
+import { mapActions, mapGetters, mapState } from 'vuex'
+
+export default {
+  name: 'App',
+  data: () => ({
+    //
+  }),
+  computed: {
+    ...mapState(['userData']),
+    ...mapGetters(['isAuthenticated'])
+  },
+  methods: {
+    ...mapActions(['logout'])
+  },
+};
+</script>
+
+<style>
+#app {
+  margin-left: 25%;
+  width: 50%;
+}
+.link {
+  color: beige !important;
+  font-weight:bold;
+  text-decoration: none;
+  /* font-family: "Roboto", sans-serif !important; */
+  margin-right: 10px;  
+}
+
+</style>

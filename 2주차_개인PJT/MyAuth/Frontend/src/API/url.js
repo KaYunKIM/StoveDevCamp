@@ -4,6 +4,7 @@ export default {
       'login': 'rest-auth/login/',
       'logout': 'rest-auth/logout/',
       'signup': 'rest-auth/signup/',
+      'profile': 'accounts/profile/',
   }
 }
 

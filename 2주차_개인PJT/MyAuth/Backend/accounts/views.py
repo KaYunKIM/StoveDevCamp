@@ -11,6 +11,14 @@ from .serializers import UserSerializer
 User = get_user_model()
 
 @api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def profile(request):
+    user = get_object_or_404(User, username=request.user.username)
+    serializer = UserSerializer(user)
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
 # @permission_classes([IsAuthenticated])
 def retrieve_password(request):
     print("1111111", request.user)
