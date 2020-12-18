@@ -41,44 +41,34 @@ $ pip install django-cors-headers
   AUTH_USER_MODEL = "app이름.class이름"
   ```
 
-  ![캡처](C:\Users\kyunkim\Desktop\StoveDevCamp\2주차_개인PJT\MyAuth_삽질\Backend\캡처.PNG)
-
-  
+  ![auth_user_model](auth_user_model.PNG)
 
   ### models.py
 
   User 모델 등록
 
-  ![1](C:\Users\kyunkim\Desktop\StoveDevCamp\2주차_개인PJT\MyAuth_삽질\Backend\1.PNG)
-
-  
+  ![1](1.PNG)
 
   ### admin.py
 
   admin 관리자에 User 모델 등록
 
-  ![2](C:\Users\kyunkim\Desktop\StoveDevCamp\2주차_개인PJT\MyAuth_삽질\Backend\2.PNG)
+  ![2](2.PNG)
 
-  ### 
-
-  		### migration
+  ### migration
 
   ```
-  $ python manage.py makemigrations
+$ python manage.py makemigrations
   $ python manage.py migrate
-  ```
-
+```
   
-
-  ### 관리가 계정 생성
-
+### 관리가 계정 생성
+  
   ```
   $ python manage.py createsuperuser
   ```
 
 ​		
-
-
 
 ## 인증 구현
 
@@ -115,25 +105,21 @@ django-rest-framework 라이브러리 기반의 인증 기능이므로 DRF 설�
 $ pip install django-rest-framework
 ```
 
-
-
 ### settings.py
 
 - app 등록해주기(rest-auth)
 
-![4](C:\Users\kyunkim\Desktop\StoveDevCamp\2주차_개인PJT\MyAuth_삽질\Backend\4.PNG)
+![4](4.PNG)
 
 - app 등록해주기(allauth) 
 
-  ![5](C:\Users\kyunkim\Desktop\StoveDevCamp\2주차_개인PJT\MyAuth_삽질\Backend\5.PNG)
-
-
+  ![5](5.PNG)
 
 ### urls.py
 
 - 로그인, 회원가입 각각 url 등록
 
-![6](C:\Users\kyunkim\Desktop\StoveDevCamp\2주차_개인PJT\MyAuth_삽질\Backend\6.PNG)
+![6](6.PNG)
 
 
 
@@ -143,7 +129,25 @@ $ pip install django-rest-framework
 
 - 우리가 커스텀한 User모델을 쓰기위해서는 User 모델에 바로 접근하는 것이 아니라 get_user_model을 import 해서 User 변수로 정의해서 사용함 
 
-![3](C:\Users\kyunkim\Desktop\StoveDevCamp\2주차_개인PJT\MyAuth_삽질\Backend\3.PNG)
+![3](3.PNG)
 
 
+
+## CSRF 오류
+
+![CSRF](CSRF.PNG)
+
+![CSRF1](CSRF1.PNG)
+
+## CORS 오류
+
+- Django settings에 등록
+
+![CORS](CORS.PNG)
+
+![CORS1](CORS1.PNG)
+
+![CORS2](CORS2.PNG)
+
+![CORS3](CORS3.PNG)
 

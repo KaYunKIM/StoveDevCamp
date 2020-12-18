@@ -65,7 +65,7 @@ export default new Vuex.Store({
       axios.post(SERVER.URL + SERVER.ROUTES.logout, null, getters.config)
         .then(() => {
           commit('SET_TOKEN', null)
-          commit('userData', {})
+          // commit('userData', {})
           cookies.remove('auth-token')
           router.push('/')
         })
