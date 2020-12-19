@@ -20,7 +20,7 @@
       <v-spacer></v-spacer>
       <router-link v-if="!isAuthenticated" class="link" to="/signup">SIGNUP<v-icon class="ml-1">person_add</v-icon></router-link>
       <router-link v-if="!isAuthenticated" class="link" to="/login">LOGIN<v-icon>mdi-login</v-icon></router-link>
-      <span v-if="isAuthenticated" class="mr-5">Welcome {{this.userData.username}}</span>
+      <span v-if="isAuthenticated" class="mr-5">Welcome {{this.userData.username}}!</span>
       <router-link v-if="isAuthenticated" class="link" to="/" @click.native="logout">LOGOUT<v-icon>mdi-logout</v-icon></router-link>
     
     </v-app-bar>

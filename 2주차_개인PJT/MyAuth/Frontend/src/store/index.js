@@ -60,6 +60,7 @@ export default new Vuex.Store({
     },
 
     signup({dispatch}, userData) {
+      console.log('userdata', userData)
       const authInfo = {
         api: SERVER.ROUTES.signup,
         data: userData

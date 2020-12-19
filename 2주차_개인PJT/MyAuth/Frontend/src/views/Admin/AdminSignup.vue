@@ -133,12 +133,15 @@ export default {
   methods: {
     submit () {
       this.$v.$touch()
+    //   if (this.checkbox) {
+    //     this.checkbox = Boolean(true)
+    //   }
       const userData = {
           username: this.username,
         //   email: this.email,
           password1: this.password,
           password2: this.passwordConfirm,
-          is_superuser: this.checkbox
+          is_superuser: Boolean(this.checkbox)
       }
       this.signup(userData)
     },
@@ -152,9 +155,10 @@ export default {
     },
     ...mapActions(['signup'])
   },
-  watch() {
-    this.checkbox
-    console.log(this.checkbox)
+  watch: {
+    checkbox() {
+      console.log(this.checkbox)
+    }
   },
 }
 </script>
