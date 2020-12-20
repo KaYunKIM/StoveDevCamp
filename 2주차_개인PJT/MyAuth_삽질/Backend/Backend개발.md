@@ -204,10 +204,10 @@ console 창에 찍히는 것으로 정상작동 확인 가능
 
 
 
-
-
 ## 해결하지 못한 부분
 
+- Admin 회원가입
+  - is_superuser 선택 시  json boolean => python boolean으로 바꾸기
+- 비밀번호 초기화
 - 회원가입, 로그인 시 패스워드 길이가 8자리 넘어가면(최소 8자리) 빨간색 나타나는 문제
-- admin 회원가입  is_superuser 선택 시  json boolean => python boolean으로 바꾸기
 - 캐시
