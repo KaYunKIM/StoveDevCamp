@@ -55,20 +55,24 @@ $ pip install django-cors-headers
 
   ![2](2.PNG)
 
-  ### migration
+  
+
+  #### migration
 
   ```
-$ python manage.py makemigrations
+  $ python manage.py makemigrations
   $ python manage.py migrate
   ```
-
-
-
-### 관리가 계정 생성  
-
-```
+  
+  
+  
+  #### 관리자 계정 생성
+  
+  ```
   $ python manage.py createsuperuser
-```
+  ```
+  
+  
 
 ## 인증 구현
 
@@ -85,24 +89,23 @@ $ python manage.py makemigrations
 
 - rest-auth 설정
 
-  ```
-$ pip install django-rest-auth
-  ```
+  ````
+  $ pip install django-rest-auth
+  ````
+
 - allauth 설정
 
-```
-$ pip install django-allauth
+  ```
+  $ pip install django-allauth
+  ```
 
+Django-rest-framework 라이브러리 기반 인증 기능으로 DRF 설치 및 설정 필요
 
-```
-django-rest-framework 라이브러리 기반의 인증 기능이므로 DRF 설치 및 설정 필요
+- DRF설정
 
-- DRF 설정
-
-```
-$ pip install django-rest-framework
-```
-
+  ```
+  $ pip install django-rest-framework
+  ```
 
 
 
@@ -140,6 +143,8 @@ $ pip install django-rest-framework
 
 ![CSRF1](CSRF1.PNG)
 
+
+
 ## CORS 오류
 
 - Django settings에 등록
@@ -156,11 +161,9 @@ $ pip install django-rest-framework
 
 ## 사용자 계정 삭제 
 
-![Screen Shot 2020-12-21 at 12.35.56 AM](Screen Shot 2020-12-21 at 12.35.56 AM-8481712.png)
+![user_delete](user_delete.png)
 
-
-
-![Screen Shot 2020-12-21 at 12.36.04 AM](Screen Shot 2020-12-21 at 12.36.04 AM-8481724.png)
+![user_delete1](user_delete1.png)
 
 
 
@@ -168,11 +171,11 @@ $ pip install django-rest-framework
 
 - settings.py
 
-![Screen Shot 2020-12-21 at 12.40.23 AM](Screen Shot 2020-12-21 at 12.40.23 AM.png)
+![user_delete2](user_delete2.png)
 
 migrate 한번 더 해주고 runserver하기
 
-![Screen Shot 2020-12-21 at 12.43.34 AM](Screen Shot 2020-12-21 at 12.43.34 AM.png)
+![user_delete3](user_delete3.png)
 
 
 
@@ -192,15 +195,13 @@ migrate 한번 더 해주고 runserver하기
 
 - settings.py
 
-![email](email-8481550.png)
+![email-8481550](email-8481550.png)
 
 console 창에 찍히는 것으로 정상작동 확인 가능
 
 실제 이메일을 받고 싶다면, 161번의 smtp를 사용하고 162번 줄 주석처리 후 167, 168에 gmail 계정 정보를 입력하면 된다.
 
-![Screen Shot 2020-12-21 at 1.16.12 AM](Screen Shot 2020-12-21 at 1.16.12 AM.png)
-
-
+![email1](email1.png)
 
 
 
@@ -211,3 +212,4 @@ console 창에 찍히는 것으로 정상작동 확인 가능
 - 비밀번호 초기화
 - 회원가입, 로그인 시 패스워드 길이가 8자리 넘어가면(최소 8자리) 빨간색 나타나는 문제
 - 캐시
+
