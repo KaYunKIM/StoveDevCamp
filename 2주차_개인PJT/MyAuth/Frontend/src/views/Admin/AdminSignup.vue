@@ -9,14 +9,14 @@
       @input="$v.username.$touch()"
       @blur="$v.username.$touch()"
     ></v-text-field>
-    <!-- <v-text-field
+    <v-text-field
       v-model="email"
       :error-messages="emailErrors"
       label="E-mail"
       required
       @input="$v.email.$touch()"
       @blur="$v.email.$touch()"
-    ></v-text-field> -->
+    ></v-text-field>
     <v-text-field
       v-model="password"
       :error-messages="passwordErrors"
@@ -69,7 +69,7 @@ import { required, minLength, maxLength, email } from 'vuelidate/lib/validators'
 import { mapActions } from 'vuex'
 
 export default {
-  name: 'Signup',
+  name: 'AdminSignup',
   mixins: [validationMixin],
 
   validations: {
@@ -86,7 +86,7 @@ export default {
 
   data: () => ({
     username: '',
-    // email: '',
+    email: '',
     password: '',
     passwordConfirm: '',
     checkbox: false,   
@@ -116,7 +116,7 @@ export default {
     },
     passwordConfirmErrors () {
       const errors = []
-      // if (!this.password) errors.push('비밀번호가 일치하지 않습니다')
+      if (!this.password) errors.push('비밀번호가 일치하지 않습니다')
       if (!this.$v.passwordConfirm.$dirty) return errors
       !this.$v.passwordConfirm.minLength && errors.push('비밀번호는 최소 8자리를 입력하세요')
       !this.$v.passwordConfirm.required && errors.push('비밀번호를 입력하세요')
@@ -133,12 +133,12 @@ export default {
   methods: {
     submit () {
       this.$v.$touch()
-    //   if (this.checkbox) {
-    //     this.checkbox = Boolean(true)
-    //   }
+      if (this.checkbox) {
+        this.checkbox = Boolean(true)
+      }
       const userData = {
           username: this.username,
-        //   email: this.email,
+          email: this.email,
           password1: this.password,
           password2: this.passwordConfirm,
           is_superuser: Boolean(this.checkbox)
@@ -148,7 +148,7 @@ export default {
     clear () {
       this.$v.$reset()
       this.username = ''
-    //   this.email = ''
+      this.email = ''
       this.password = ''
       this.passwordConfirm = ''
       this.checkbox = false

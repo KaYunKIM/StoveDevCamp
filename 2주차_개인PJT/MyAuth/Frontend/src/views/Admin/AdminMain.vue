@@ -1,23 +1,32 @@
 <template>
-  <v-simple-table>
+  <v-simple-table class="form">
     <template v-slot:default>
       <thead>
+        <h1>Admin Page</h1>
         <tr>
           <th class="text-left">
-            Name
+            Username
           </th>
           <th class="text-left">
-            Calories
+            Email
+          </th>
+          <th class="text-left">
+            Date Joined
+          </th>
+          <th class="text-left">
+            Superuser
           </th>
         </tr>
       </thead>
       <tbody>
         <tr
-          v-for="item in desserts"
-          :key="item.name"
+          v-for="item in users"
+          :key="item.username"
         >
-          <td>{{ item.name }}</td>
-          <td>{{ item.calories }}</td>
+          <td>{{ item.username }}</td>
+          <td>{{ item.email }}</td>
+          <td>{{ item.date_joined }}</td>
+          <td>{{ item.is_superuser }}</td>
         </tr>
       </tbody>
     </template>
@@ -25,60 +34,30 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
+  name: 'AdminMain',
   data () {
     return {
-      desserts: [
-        {
-          name: 'Frozen Yogurt',
-          calories: 159,
-        },
-        {
-          name: 'Ice cream sandwich',
-          calories: 237,
-        },
-        {
-          name: 'Eclair',
-          calories: 262,
-        },
-        {
-          name: 'Cupcake',
-          calories: 305,
-        },
-        {
-          name: 'Gingerbread',
-          calories: 356,
-        },
-        {
-          name: 'Jelly bean',
-          calories: 375,
-        },
-        {
-          name: 'Lollipop',
-          calories: 392,
-        },
-        {
-          name: 'Honeycomb',
-          calories: 408,
-        },
-        {
-          name: 'Donut',
-          calories: 452,
-        },
-        {
-          name: 'KitKat',
-          calories: 518,
-        },
-      ],
+      users: [],
     }
+  },
+  computed: {
+    ...mapState(['userList']),
   },
   methods: {
     ...mapActions(['fetchUserList'])
   },
   created() {
     this.fetchUserList()
+    this.users = this.userList
   }
 }
 </script>
+
+<style scoped>
+.form {
+    margin-top: 100px;
+}
+</style>

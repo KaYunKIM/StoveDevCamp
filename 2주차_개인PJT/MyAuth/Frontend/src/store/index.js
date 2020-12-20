@@ -95,14 +95,24 @@ export default new Vuex.Store({
         })
         .catch(err => console.error(err.response.data))
       })
-
     },
+
     fetchUserList({ getters, commit }) {
-      axios.get(SERVER.URL + SERVER.ROUTES.userList, getters.config)
-      .then(res => commit('SET_USERLIST', res.data))
-      .catch(err => console.error(err.response.data))
+      return new Promise(() => {
+        axios.get(SERVER.URL + SERVER.ROUTES.userList, getters.config)
+          .then(res => commit('SET_USERLIST', res.data))
+          .catch(err => console.error(err.response.data))
+      })
     },
 
+    passwordChange({ getters }, passwordData) {
+      axios.post(SERVER.URL + SERVER.ROUTES.passwordChange, passwordData, getters.config)
+        .then(() => {
+          alert('비밀번호가 정상적으로 변경됐습니다.')
+          router.push('/profile')
+        })
+        .catch(err => console.error(err.response.data))
+    }
   },
   modules: {
   },

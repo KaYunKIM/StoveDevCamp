@@ -9,14 +9,14 @@
       @input="$v.username.$touch()"
       @blur="$v.username.$touch()"
     ></v-text-field>
-    <!-- <v-text-field
+    <v-text-field
       v-model="email"
       :error-messages="emailErrors"
       label="E-mail"
       required
       @input="$v.email.$touch()"
       @blur="$v.email.$touch()"
-    ></v-text-field> -->
+    ></v-text-field>
     <v-text-field
       v-model="password"
       :error-messages="passwordErrors"
@@ -25,15 +25,6 @@
       required
       @input="$v.password.$touch()"
       @blur="$v.password.$touch()"
-    ></v-text-field>
-    <v-text-field
-      v-model="passwordConfirm"
-      :error-messages="passwordConfirmErrors"
-      :counter="8"
-      label="Password Confirm"
-      required
-      @input="$v.passwordConfirm.$touch()"
-      @blur="$v.passwordConfirm.$touch()"
     ></v-text-field>
     <v-row class="mt-3">
       <v-btn 
@@ -60,21 +51,19 @@ import { required, minLength, maxLength, email } from 'vuelidate/lib/validators'
 import { mapActions } from 'vuex'
 
 export default {
-  name: 'Signup',
+  name: 'Login',
   mixins: [validationMixin],
 
   validations: {
     username: { required, maxLength: maxLength(10) },
     email: { required, email },
     password: { required, minLength: minLength(8) },
-    passwordConfirm: { required, minLength: minLength(8) },
   },
 
   data: () => ({
     username: '',
-    // email: '',
-    password: '',
-    passwordConfirm: '',    
+    email: '',
+    password: '', 
   }),
 
   computed: {
@@ -99,14 +88,6 @@ export default {
       !this.$v.password.required && errors.push('비밀번호를 입력하세요')
       return errors
     },
-    passwordConfirmErrors () {
-      const errors = []
-      // if (!this.password) errors.push('비밀번호가 일치하지 않습니다')
-      if (!this.$v.passwordConfirm.$dirty) return errors
-      !this.$v.passwordConfirm.minLength && errors.push('비밀번호는 최소 8자리를 입력하세요')
-      !this.$v.passwordConfirm.required && errors.push('비밀번호를 입력하세요')
-      return errors
-    },
   },
 
   methods: {
@@ -114,20 +95,18 @@ export default {
       this.$v.$touch()
       const userData = {
           username: this.username,
-        //   email: this.email,
-          password1: this.password,
-          password2: this.passwordConfirm,
+          email: this.email,
+          password: this.password,
       }
-      this.signup(userData)
+      this.login(userData)
     },
     clear () {
       this.$v.$reset()
       this.username = ''
-    //   this.email = ''
+      this.email = ''
       this.password = ''
-      this.passwordConfirm = ''
     },
-    ...mapActions(['signup'])
+    ...mapActions(['login'])
   },
 }
 </script>

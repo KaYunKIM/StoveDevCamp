@@ -1,11 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
-import LoginView from '@/views/Login.vue'
-import SignupView from '@/views/Signup.vue'
-import AdminLoginView from '@/views/Admin/AdminLogin.vue'
-import AdminSignupView from '@/views/Admin/AdminSignup.vue'
-import AdminMainView from '@/views/Admin/AdminMain.vue'
+
+import LoginView from '@/views/accounts/Login.vue'
+import SignupView from '@/views/accounts/Signup.vue'
+
+import ProfileView from '@/views/accounts/Profile.vue'
+import PasswordChangeView from '@/views/accounts/PasswordChange.vue'
+
+import AdminLoginView from '@/views/admin/AdminLogin.vue'
+import AdminSignupView from '@/views/admin/AdminSignup.vue'
+import AdminMainView from '@/views/admin/AdminMain.vue'
 
 Vue.use(VueRouter)
 
@@ -26,18 +31,28 @@ const routes = [
     component: SignupView
   },
   {
+    path: '/profile',
+    name: 'Profile',
+    component: ProfileView
+  },
+  {
+    path: '/profile/password-change',
+    name: 'PasswordChange',
+    component: PasswordChangeView
+  },
+  {
     path: '/admin/login',
-    name: 'Adimin',
+    name: 'AdminLogin',
     component: AdminLoginView
   },
   {
     path: '/admin/signup',
-    name: 'Adimin',
+    name: 'AdminSignup',
     component: AdminSignupView
   },
   {
     path: '/admin',
-    name: 'Adimin',
+    name: 'Admin',
     component: AdminMainView
   },
 

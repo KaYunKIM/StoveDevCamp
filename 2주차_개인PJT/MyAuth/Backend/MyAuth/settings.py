@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     #Auth(signup/social)
     'allauth',  
     'allauth.account',
+    'allauth.socialaccount',  #사용자 삭제 위해서 필요
     'rest_auth.registration',
     
 ]
@@ -152,6 +153,19 @@ REST_FRAMEWORK = {
     ]
 }
 
+
+# ACCOUNT_EMAIL_REQUIRED = True
+# ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_VERIFICATION = 'optional'
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = ''  #gmail email
+EMAIL_HOST_PASSWORD = ''   #gmail pw
+
 
 AUTH_USER_MODEL = 'accounts.User'

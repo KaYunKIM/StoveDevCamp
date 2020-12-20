@@ -12,5 +12,3 @@ class UserSerializer(serializers.ModelSerializer):
             'is_superuser',
             'date_joined',
         ]
-            
-        

@@ -12,7 +12,7 @@
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to MyAuth
+          Your Profile Page
         </h1>
       </v-col>
 
@@ -20,13 +20,9 @@
         class="mb-5"
         cols="12"
       >
-        <h2 class="headline font-weight-bold mb-3">
-          Are you a staff?
-        </h2>
-
         <v-row justify="center">
-          <router-link class="subheading mx-3" to="/admin/signup">Need to signup?</router-link>
-          <router-link class="subheading mx-3" to="/admin/login">Have an account?</router-link>
+          <router-link class="subheading mx-3" to="/admin/signup">Forgor your password?</router-link>
+          <router-link class="subheading mx-3" to="/profile/password-change">Change your password?</router-link>
         </v-row>
       </v-col>
     </v-row>
@@ -35,24 +31,29 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
-  name: 'Home',
-  data: () => ({
-  }),
+  name: 'Profile',
+  data () {
+    return {
+      userInfo: '',
+    }
+  },
   computed: {
     ...mapState(['userData']),
-    ...mapGetters(['isAuthenticated'])
+  },
+  methods: {
+    ...mapActions([])
   },
   created() {
-    // console.log(this.userData)
+    this.userInfo = this.userData
   }
 }
 </script>
 
-<style>
-.home {
-  margin-top: 80px;
+<style scoped>
+.form {
+    margin-top: 100px;
 }
 </style>

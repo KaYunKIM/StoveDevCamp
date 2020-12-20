@@ -60,15 +60,15 @@ $ pip install django-cors-headers
   ```
 $ python manage.py makemigrations
   $ python manage.py migrate
-```
-  
-### 관리가 계정 생성
-  
-  ```
-  $ python manage.py createsuperuser
   ```
 
-​		
+
+
+### 관리가 계정 생성  
+
+```
+  $ python manage.py createsuperuser
+```
 
 ## 인증 구현
 
@@ -85,18 +85,16 @@ $ python manage.py makemigrations
 
 - rest-auth 설정
 
-```
+  ```
 $ pip install django-rest-auth
-```
-
+  ```
 - allauth 설정
 
 ```
 $ pip install django-allauth
+
+
 ```
-
-
-
 django-rest-framework 라이브러리 기반의 인증 기능이므로 DRF 설치 및 설정 필요
 
 - DRF 설정
@@ -104,6 +102,9 @@ django-rest-framework 라이브러리 기반의 인증 기능이므로 DRF 설�
 ```
 $ pip install django-rest-framework
 ```
+
+
+
 
 ### settings.py
 
@@ -151,3 +152,50 @@ $ pip install django-rest-framework
 
 ![CORS3](CORS3.PNG)
 
+
+
+## 사용자 계정 삭제 
+
+![Screen Shot 2020-12-21 at 12.35.56 AM](Screen Shot 2020-12-21 at 12.35.56 AM-8481712.png)
+
+
+
+![Screen Shot 2020-12-21 at 12.36.04 AM](Screen Shot 2020-12-21 at 12.36.04 AM-8481724.png)
+
+
+
+#### 오류해결
+
+- settings.py
+
+![Screen Shot 2020-12-21 at 12.40.23 AM](Screen Shot 2020-12-21 at 12.40.23 AM.png)
+
+migrate 한번 더 해주고 runserver하기
+
+![Screen Shot 2020-12-21 at 12.43.34 AM](Screen Shot 2020-12-21 at 12.43.34 AM.png)
+
+
+
+## E-mail 인증
+
+- 사전준비
+
+  1. https://mail.google.com/mail/u/0/?pli=1#settings/fwdandpop
+
+     IMAP 액세스 사용 선택 후 변경사항 저장
+
+  2. https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4M140Woaw_eH2rw0aUV5kwtRBXkScENdcsZrKUUTljVzQPXPdt1pQqaAM6xJiti6jtPkJdhjzpg1sgB3rGfrZ0Knf_K5A
+
+     보안 수준이 낮은 앱의 액세스 허용
+
+     
+
+- settings.py
+
+![email](email-8481550.png)
+
+console 창에 찍히는 것으로 정상작동 확인 가능
+
+실제 이메일을 받고 싶다면, 161번의 smtp를 사용하고 162번 줄 주석처리 후 167, 168에 gmail 계정 정보를 입력하면 된다.
+
+![Screen Shot 2020-12-21 at 1.16.12 AM](Screen Shot 2020-12-21 at 1.16.12 AM.png)

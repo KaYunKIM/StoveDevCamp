@@ -4,7 +4,10 @@ export default {
       'login': 'rest-auth/login/',
       'logout': 'rest-auth/logout/',
       'signup': 'rest-auth/signup/',
+      'userList': 'accounts/',
       'profile': 'accounts/profile/',
+      'passwordChange': 'rest-auth/password/change/',
+      
   }
 }
 
