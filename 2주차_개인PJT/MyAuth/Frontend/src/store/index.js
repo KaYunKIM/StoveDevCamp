@@ -38,14 +38,12 @@ export default new Vuex.Store({
   },
   actions: {
     authUser({ state, commit, dispatch }, authInfo) {
-      console.log('authUserok')
       return new Promise((resolve) => {
         axios.post(SERVER.URL + authInfo.api, authInfo.data)
           .then((res) => {
             commit('SET_TOKEN', res.data.key)
             dispatch('fetchUserData')
               .then(() => {
-                console.log('hereeeeee', state.userData)
                 if (state.userData.is_superuser) {
                   router.push('/admin')
                 } else {
@@ -55,12 +53,14 @@ export default new Vuex.Store({
               .catch(err => console.error(err.response.data))
             resolve(res)
           })
-          .catch(err => console.error(err.response.data))
+          .catch((err) => {
+            console.error(err.response.data)
+            alert('입력한 정보를 다시 확인해주세요.')
+          })
       })
     },
 
     signup({dispatch}, userData) {
-      console.log('userdata', userData)
       const authInfo = {
         api: SERVER.ROUTES.signup,
         data: userData
@@ -68,7 +68,7 @@ export default new Vuex.Store({
       dispatch('authUser', authInfo)
     },
 
-    login({dispatch}, userData) {
+    login({ dispatch }, userData) {
       const authInfo = {
         api: SERVER.ROUTES.login,
         data: userData
@@ -89,11 +89,11 @@ export default new Vuex.Store({
     fetchUserData({ getters, commit }) {
       return new Promise((resolve) => {
         axios.get(SERVER.URL + SERVER.ROUTES.profile, getters.config)
-        .then((res) => {
-          commit('SET_USERDATA', res.data)
-          resolve(res.data.is_superuser)
-        })
-        .catch(err => console.error(err.response.data))
+          .then((res) => {
+            commit('SET_USERDATA', res.data)
+            resolve(res.data.is_superuser)
+          })
+          .catch(err => console.error(err.response.data))
       })
     },
 

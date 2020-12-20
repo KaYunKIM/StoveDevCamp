@@ -3,6 +3,7 @@
     <template v-slot:default>
       <thead>
         <h1>Admin Page</h1>
+        <a href="http://localhost:8000/admin/"><h3>more in detail</h3></a>
         <tr>
           <th class="text-left">
             Username
@@ -59,5 +60,8 @@ export default {
 <style scoped>
 .form {
     margin-top: 100px;
+}
+.title {
+  justify-content: space-between;
 }
 </style>

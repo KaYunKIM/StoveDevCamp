@@ -1,5 +1,8 @@
 <template>
-  <Login/>
+  <div>
+    <Login/>
+  </div>
+  
 </template>
 
 <script>
@@ -10,5 +13,7 @@ export default {
   components: {
     Login
   },
+  created() {
+  }
 }
 </script>

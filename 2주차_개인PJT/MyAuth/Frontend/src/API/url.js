@@ -7,6 +7,7 @@ export default {
       'userList': 'accounts/',
       'profile': 'accounts/profile/',
       'passwordChange': 'rest-auth/password/change/',
+      'admin': 'admin/',
       
   }
 }

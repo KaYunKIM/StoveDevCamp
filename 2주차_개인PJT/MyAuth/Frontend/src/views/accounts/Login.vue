@@ -1,5 +1,7 @@
 <template>
   <form class="form">
+    <h1 v-if="pageTitle">Admin Login</h1>
+    <h1 v-else>Login</h1>
     <v-text-field
       v-model="username"
       :error-messages="usernameErrors"
@@ -61,6 +63,7 @@ export default {
   },
 
   data: () => ({
+    pageTitle: '',
     username: '',
     email: '',
     password: '', 
@@ -108,6 +111,9 @@ export default {
     },
     ...mapActions(['login'])
   },
+  created() {
+    this.pageTitle = document.location.href.includes('admin')
+  }
 }
 </script>
 

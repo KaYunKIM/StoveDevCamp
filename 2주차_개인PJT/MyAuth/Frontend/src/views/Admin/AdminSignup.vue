@@ -1,5 +1,6 @@
 <template>
   <form class="form">
+    <h1>Admin Signup</h1>
     <v-text-field
       v-model="username"
       :error-messages="usernameErrors"
@@ -116,7 +117,7 @@ export default {
     },
     passwordConfirmErrors () {
       const errors = []
-      if (!this.password) errors.push('비밀번호가 일치하지 않습니다')
+      if (this.password !== this.passwordConfirm) errors.push('비밀번호가 일치하지 않습니다')
       if (!this.$v.passwordConfirm.$dirty) return errors
       !this.$v.passwordConfirm.minLength && errors.push('비밀번호는 최소 8자리를 입력하세요')
       !this.$v.passwordConfirm.required && errors.push('비밀번호를 입력하세요')
