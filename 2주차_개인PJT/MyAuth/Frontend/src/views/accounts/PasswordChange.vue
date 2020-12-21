@@ -85,6 +85,7 @@ export default {
     new_password2Errors () {
       const errors = []
       if (!this.$v.new_password2.$dirty) return errors
+      if (this.new_password1 !== this.new_password2) errors.push('비밀번호가 일치하지 않습니다')
       !this.$v.new_password2.minLength && errors.push('비밀번호는 최소 8자리를 입력하세요')
       !this.$v.new_password2.required && errors.push('비밀번호를 입력하세요')
       return errors
