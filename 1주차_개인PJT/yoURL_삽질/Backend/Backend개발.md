@@ -70,9 +70,7 @@
 
 ![postman2](postman2.JPG)
 
-
-
-
+![postman3](postman3-9691899.png)
 
 ## 설치 package 관리
 
