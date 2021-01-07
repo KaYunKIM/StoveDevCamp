@@ -1,0 +1,18 @@
+### spark-jupyter notebook 연동
+
+- 환경 변수 설정=> 사용자 변수 추가
+
+```
+PYSPARK_DRIVER_PYTHON
+jupyter
+```
+
+```
+PYSPARK_DRIVER_PYTHON_OPTS
+'notebook'
+```
+
+- 환경 변수 변경 후 새로고침
+
+  cmd창에서 set 입력 => 현재 환경 변수 목록 출력되면서 갱신 내용 반영
+  
