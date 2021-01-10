@@ -6,9 +6,23 @@
 
 
 - pyspark.streaming.kafka 모듈 에러
-  - python 3.7 downgrade
+  - python 3.7 설치
   - pyspark 2.4.6 설치
   - Spark 2.4.7 설치
+
+
+
+- Cassandra 설치
+  - Java 1.8.0_251(=> downgrade 진행)
+  - python2.715(=> 설치 후 path 설정 및 python2로 실행 명령어 번경)
+
+
+
+- 시스템 환경 변수 편집
+
+  ![1](1.PNG)
+
+  ![2](2.PNG)
 
 
 
