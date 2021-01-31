@@ -1,0 +1,158 @@
+{
+    "topic": null,
+    "datehour": null,
+    "created_at": null,
+    "id": null,
+    "text": null,
+    "attachments": {
+        "media_keys": null
+    },
+    "author_id": null,
+    "conversation_id": null,
+    "entities": {
+        "urls": [{
+            "start": null,
+            "end": null,
+            "url": null,
+            "expanded_url": null,
+            "display_url": null,
+            "unwound_url": null,
+            "title": null,
+            "status": null,
+            "description": null,
+            "images": [
+                {
+                    "url": null,
+                    "width": null,
+                    "height": null
+                }
+            ]
+        }],
+        "mentions": [{
+            "start": null,
+            "end": null,
+            "username": null
+        }],
+        "hashtags": [{
+            "start": null,
+            "end": null,
+            "tag": null
+        }],
+        "cashtags": [{
+            "start": null,
+            "end": null,
+            "tag": null
+        }]
+    },
+    "in_reply_to_user_id": null,
+    "possibly_sensitive": false,
+    "public_metrics": {
+        "retweet_count": null,
+        "reply_count": null,
+        "like_count": null,
+        "quote_count": null
+    },
+    "referenced_tweets": [{
+        "type": null,
+        "id": null
+    }],
+    "reply_settings": null,
+    "source": null,
+    "lang": null,
+    "geo": {
+        "coordinates": {
+            "type": null,
+            "coordinates": null
+        },
+        "place_id": null
+    },
+    "stored_at": null,
+    "includes": {
+        "tweets": [{
+            "created_at": null,
+            "id": null,
+            "text": null,
+            "attachments": {
+                "media_keys": null
+            },
+            "author_id": null,
+            "conversation_id": null,
+            "entities": {
+                "urls": [{
+                    "start": null,
+                    "end": null,
+                    "url": null,
+                    "expanded_url": null,
+                    "display_url": null,
+                    "unwound_url": null,
+                    "images": [{
+                        "url": null,
+                        "width": null,
+                        "height": null
+                    }]
+                }],
+                "mentions": [{
+                    "start": null,
+                    "end": null,
+                    "username": null
+                }],
+                "hashtags": [{
+                    "start": null,
+                    "end": null,
+                    "tag": null
+                }],
+                "cashtags": [{
+                    "start": null,
+                    "end": null,
+                    "tag": null
+                }]
+            },
+            "in_reply_to_user_id": null,
+            "possibly_sensitive": false,
+            "public_metrics": {
+                "retweet_count": null,
+                "reply_count": null,
+                "like_count": null,
+                "quote_count": null
+            },
+            "referenced_tweets": [{
+                "type": null,
+                "id": null
+            }],
+            "reply_settings": null,
+            "source": null,
+            "lang": null,
+            "geo": {
+                "coordinates": {
+                    "type": null,
+                    "coordinates": null
+                },
+                "place_id": null
+            }
+        }],
+        "users": [{
+            "id": null,
+            "name": null,
+            "username": null,
+            "profile_image_url": null,
+            "verified": false
+        }],
+        "media": [{
+            "type": null,
+            "media_key": null,
+            "url": null,
+            "preview_image_url": null,
+            "public_metrics": {
+                "view_count": null
+            }
+        }],
+        "places": [{
+            "full_name": null,
+            "id": null,
+            "country": null,
+            "country_code": null,
+            "name": null,
+            "place_type": null
+        }]
+    }
+}
