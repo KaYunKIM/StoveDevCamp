@@ -31,6 +31,4 @@ class KnuSL():
 
 def text_analysis(wordname):
     ksl = KnuSL
-    #print(wordname)
-    #print(ksl.data_list(wordname))
     return ksl.data_list(wordname)

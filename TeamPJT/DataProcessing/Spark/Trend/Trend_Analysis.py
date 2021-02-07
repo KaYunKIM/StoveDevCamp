@@ -41,19 +41,19 @@ ss = SparkSession.builder \
 
 DB_topic = "covid-19"
 
-## return tweets dataframe
 #Real Time
 while True:
     now = datetime.datetime.now()
     search = str(now - datetime.timedelta(hours=9, minutes=1))
     datehour = search[6:7]+search[8:10]+search[11:13]+search[14:16]
     try:
+        ## return tweets dataframe
         tweets = tweet_data("tweets", "tweettrend", datehour)
     except:
         pass
     
 
-    ## kor tweet data only
+    ## kor tweets only
     tweets = tweets.filter(tweets.lang == "ko")
     
 
@@ -61,15 +61,17 @@ while True:
     #tweets.describe().show()
 
 
-    ## count total
+    ## total count
     total = tweets.count()
+    if total == 0:
+        continue
 
 
-    ## count user_id
+    ## user_id count
     author = tweets.select("author_id").distinct().count()
 
 
-    ## count region
+    ## region count
     place_id = tweets.groupBy("place_id").count()
 
     place_info = tweets.select("place_id", "includes") \
@@ -94,7 +96,7 @@ while True:
         region[i['country_code']] = i['count']
 
 
-    ## count source
+    ## source count
     tweets_source = tweets.groupBy("source").count()
     tweets_source = tweets_source.na.drop().toJSON().map(lambda j: json.loads(j)).collect()
 
@@ -107,7 +109,7 @@ while True:
         source[i['source']] = i['count']
 
 
-    ## count retweet
+    ## retweet count
     tweets_referenced_tweets = tweets.select("referenced_tweets")
     tweets_retweet = tweets_referenced_tweets \
             .withColumn("retweet_type", col("referenced_tweets").getItem("type")[0]) \
@@ -117,7 +119,6 @@ while True:
     retweet_count = tweets_retweet.groupBy("retweet_type").count()
     retweet_count = retweet_count.na.drop().toJSON().map(lambda j: json.loads(j)).collect()
     retweet =0
-    #print(retweet_count)
 
     for i in retweet_count:
         if i['retweet_type'] == 'retweeted':
@@ -125,7 +126,7 @@ while True:
             break
 
     
-    ## count related words
+    ## related words count 
     okt = Okt()
     tweet_message = tweets.select("message").collect()
 
@@ -134,10 +135,7 @@ while True:
     for i in tweet_message:
         tweet_word = okt.nouns(i['message'])
         keywords.extend(tweet_word)
-    #print(keywords)
 
-
-    ## word_count
     word_count = dict(Counter(keywords).most_common(int(len(keywords)*0.05)))
     word_count = sorted(word_count.items(), key=lambda x: x[1], reverse=True)
     for i in range(len(word_count)-1, -1, -1):
@@ -145,7 +143,6 @@ while True:
             word_count.pop()
         else:
             break
-    #print(word_count)
     
     stop_file_name = open('Stopwords.txt', 'r', encoding='utf-8')
     stop_words = list(stop_file_name.readlines())
@@ -155,8 +152,6 @@ while True:
     for i in new_word_list:
         if i[0] + '\n' in stop_words:
             word_count.remove((i[0], i[1]))
-        
-    #print('word_count', word_count)
 
     related_words = {}
     reputation = {
@@ -243,7 +238,8 @@ while True:
         print('related_words: ', related_words)
         print('reputation: ', reputation)
         print('source: ', source)
-
+        
+        ## get tweets from Cassandra DB every 1 minute
         time.sleep(50)
     except:
         pass
