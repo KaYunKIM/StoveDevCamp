@@ -1,0 +1,369 @@
+[
+{
+  "data": {
+    "created_at": "2021-01-13T02:38:34.000Z",
+    "conversation_id": 1349184032576315392,
+    "lang": "ko",
+    "author_id": 953617271640924161,
+    "referenced_tweets": [
+      {
+        "type": "retweeted",
+        "id": 1349183932823048193
+      }
+    ],
+    "possibly_sensitive": false,
+    "entities": {
+      "mentions": [
+        {
+          "start": 3,
+          "end": 16,
+          "username": "nylee_office"
+        }
+      ]
+    },
+    "id": 1349184032576315392,
+    "public_metrics": {
+      "retweet_count": 4,
+      "reply_count": 0,
+      "like_count": 0,
+      "quote_count": 0
+    },
+    "source": "Twitter for iPhone",
+    "text": "RT @nylee_office: 코로나는 역사상 없었던 양극화 확대를 세계적으로 초래하고있습니다. 우리나라에서도 양극화 확대는 경제의 민낯 드러내고 있습니 다. 그것을 잘 치유하면 우리는 코로나 위기 이후 강한 경제로 거듭날 것입니다. \nhttps:/…"
+  },
+  "includes": {
+    "users": [
+      {
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1190963809751617537/4gJtoCIn_normal.jpg",
+        "verified": false,
+        "name": "이니쑤기다해",
+        "username": "vOECZzkhLPR6P3r",
+        "id": 953617271640924161
+      },
+      {
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1287984705850155009/v4jyBuwJ_normal.jpg",
+        "verified": true,
+        "name": "이낙연 대표실",
+        "username": "nylee_office",
+        "id": 1280098285785452544
+      }
+    ],
+    "tweets": [
+      {
+        "created_at": "2021-01-13T02:38:10.000Z",
+        "conversation_id": 1349183932823048193,
+        "author_id": 1280098285785452544,
+        "entities": {
+          "urls": [
+            {
+              "start": 114,
+              "end": 137,
+              "url": "https://t.co/SiOOxFk84M",
+              "expanded_url": "http://naver.me/xtWKrWDR",
+              "display_url": "naver.me/xtWKrWDR",
+              "unwound_url": "https://link.naver.com/bridge?url=https%3A%2F%2Fn.news.naver.com%2Farticle%2F008%2F0004527800&dst=naversearchapp%3A%2F%2Finappbrowser%3Furl%3Dhttps%253A%252F%252Fn.news.naver.com%252Farticle%252F008%252F0004527800%26version%3D10%26sourceReferer%3Dshare"
+            }
+          ]
+        },
+        "possibly_sensitive": false,
+        "id": 1349183932823048193,
+        "public_metrics": {
+          "retweet_count": 4,
+          "reply_count": 0,
+          "like_count": 4,
+          "quote_count": 0
+        },
+        "source": "Twitter for Android",
+        "text": "코로나는 역사상 없었던 양극화 확대를 세계적으로 초래하고있습니다. 우리나라에서도 양극화 확대는 경제의 민낯 드러내고 있습니다. 그것을 잘  치유하면 우리는 코로나 위기 이후 강한 경제로 거듭날 것입니다. \nhttps://t.co/SiOOxFk84M"
+      }
+    ]
+  }
+},
+{
+  "data": {
+    "created_at": "2021-01-13T02:38:34.000Z",
+    "conversation_id": 1349184033226326016,
+    "lang": "ko",
+    "author_id": 1158746320321990656,
+    "referenced_tweets": [
+      {
+        "type": "retweeted",
+        "id": 1348910615520104456
+      }
+    ],
+    "possibly_sensitive": false,
+    "entities": {
+      "mentions": [
+        {
+          "start": 3,
+          "end": 16,
+          "username": "janghyeyeong"
+        }
+      ]
+    },
+    "id": 1349184033226326016,
+    "public_metrics": {
+      "retweet_count": 70,
+      "reply_count": 0,
+      "like_count": 0,
+      "quote_count": 0
+    },
+    "source": "Twitter for iPhone",
+    "text": "RT @janghyeyeong: “코로나로 많은 이득을 얻는 계층이나 업종이 코로나의 이익을 일부 사회에 기여해 피해가 큰 쪽을 돕는 다양한 방식을 우리 사회 도 논의할 만하다”라는 것입니다. 참 반가운 말씀입니다. 그러나 이러한 코로나 이익 공유제를…"
+  },
+  "includes": {
+    "users": [
+      {
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1346758357479112704/PXB6DunX_normal.jpg",
+        "verified": false,
+        "name": "앤라",
+        "username": "Anne_ra_",
+        "id": 1158746320321990656
+      },
+      {
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1272051306023186432/iNA8sNaj_normal.jpg",
+        "verified": true,
+        "name": "장혜영",
+        "username": "janghyeyeong",
+        "id": 1242741961171202048
+      }
+    ],
+    "tweets": [
+      {
+        "created_at": "2021-01-12T08:32:06.000Z",
+        "conversation_id": 1348910614404427776,
+        "author_id": 1242741961171202048,
+        "referenced_tweets": [
+          {
+            "type": "replied_to",
+            "id": 1348910614404427776
+          }
+        ],
+        "possibly_sensitive": false,
+        "id": 1348910615520104456,
+        "public_metrics": {
+          "retweet_count": 70,
+          "reply_count": 1,
+          "like_count": 43,
+          "quote_count": 1
+        },
+        "source": "Twitter for iPhone",
+        "in_reply_to_user_id": 1242741961171202048,
+        "text": "“코로나로 많은 이득을 얻는 계층이나 업종이 코로나의 이익을 일부 사회에 기여해 피해가 큰 쪽을 돕는 다양한 방식을 우리 사회도 논의할 만하 다”라는 것입니다. 참 반가운 말씀입니다. 그러나 이러한 코로나 이익 공유제를 ‘자발적 참여’로 도입하자는 말씀은 참 무책임한 말씀입니다."
+      }
+    ]
+  }
+},
+{
+  "data": {
+    "created_at": "2021-01-13T02:38:35.000Z",
+    "conversation_id": 1349184038108499968,
+    "author_id": 778670190359777281,
+    "referenced_tweets": [
+      {
+        "type": "retweeted",
+        "id": 1349181705198858241
+      }
+    ],
+    "entities": {
+      "urls": [
+        {
+          "start": 78,
+          "end": 101,
+          "url": "https://t.co/0GL1CuxYdc",
+          "expanded_url": "https://news.khan.co.kr/kh_news/khan_art_view.html?artid=202101130600015&code=940601#csidx293206494db65119a5e79a0f48dc052",
+          "display_url": "news.khan.co.kr/kh_news/khan_a…",
+          "unwound_url": "https://news.khan.co.kr/kh_news/khan_art_view.html?artid=202101130600015&code=940601#csidx293206494db65119a5e79a0f48dc052"
+        }
+      ],
+      "mentions": [
+        {
+          "start": 3,
+          "end": 18,
+          "username": "luxsecuritatis"
+        }
+      ]
+    },
+    "possibly_sensitive": false,
+    "id": 1349184038108499968,
+    "public_metrics": {
+      "retweet_count": 5,
+      "reply_count": 0,
+      "like_count": 0,
+      "quote_count": 0
+    },
+    "source": "Twitter for Android",
+    "text": "RT @luxsecuritatis: 90.6%가 ‘코로나19 환자가 다른 환자에 비해 2배 이상 간호가 힘들다’고 답했다.\"\n\n원문보기: \nhttps://t.co/0GL1CuxYdc"
+  },
+  "includes": {
+    "users": [
+      {
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1239863509195747329/xqh2PfTn_normal.jpg",
+        "verified": false,
+        "name": "도트",
+        "username": "qawsedrf1976",
+        "id": 778670190359777281
+      },
+      {
+        "profile_image_url": "https://pbs.twimg.com/profile_images/856036743178354688/B4p_M38v_normal.jpg",
+        "verified": false,
+        "name": "lux securitatis",
+        "username": "luxsecuritatis",
+        "id": 149830678
+      }
+    ],
+    "tweets": [
+      {
+        "created_at": "2021-01-13T02:29:19.000Z",
+        "conversation_id": 1349181294467403780,
+        "author_id": 149830678,
+        "referenced_tweets": [
+          {
+            "type": "replied_to",
+            "id": 1349181524025823232
+          }
+        ],
+        "entities": {
+          "urls": [
+            {
+              "start": 58,
+              "end": 81,
+              "url": "https://t.co/0GL1CuxYdc",
+              "expanded_url": "https://news.khan.co.kr/kh_news/khan_art_view.html?artid=202101130600015&code=940601#csidx293206494db65119a5e79a0f48dc052",
+              "display_url": "news.khan.co.kr/kh_news/khan_a…",
+              "unwound_url": "https://news.khan.co.kr/kh_news/khan_art_view.html?artid=202101130600015&code=940601#csidx293206494db65119a5e79a0f48dc052"
+            }
+          ]
+        },
+        "possibly_sensitive": false,
+        "id": 1349181705198858241,
+        "public_metrics": {
+          "retweet_count": 5,
+          "reply_count": 0,
+          "like_count": 0,
+          "quote_count": 0
+        },
+        "source": "Twitter Web App",
+        "in_reply_to_user_id": 149830678,
+        "text": "90.6%가 ‘코로나19 환자가 다른 환자에 비해 2배 이상 간호가 힘들다’고 답했다.\"\n\n원문보기: \nhttps://t.co/0GL1CuxYdc"
+      }
+    ]
+  }
+},
+{
+  "data": {
+    "created_at": "2021-01-13T02:38:38.000Z",
+    "conversation_id": 1349184050754326528,
+    "lang": "ko",
+    "author_id": 1082127625693290496,
+    "entities": {
+      "urls": [
+        {
+          "start": 37,
+          "end": 60,
+          "url": "https://t.co/819bhwPvqn",
+          "expanded_url": "http://m.site.naver.com/0K0bb",
+          "display_url": "m.site.naver.com/0K0bb",
+          "unwound_url": "https://obser.tistory.com/87"
+        }
+      ]
+    },
+    "possibly_sensitive": false,
+    "id": 1349184050754326528,
+    "public_metrics": {
+      "retweet_count": 0,
+      "reply_count": 0,
+      "like_count": 0,
+      "quote_count": 0
+    },
+    "source": "Twitter for Android",
+    "text": "코로나 소상공인 3차 지원금재난 신청 대상 방법 및 지급 바로가기 https://t.co/819bhwPvqn 소상공인 버팀목자금 신청 대상"
+  },
+  "includes": {
+    "users": [
+      {
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1082128090115989504/DABowCbv_normal.jpg",
+        "verified": false,
+        "name": "tiimetome09",
+        "username": "timetome091",
+        "id": 1082127625693290496
+      }
+    ]
+  }
+},
+{
+  "data": {
+    "created_at": "2021-01-13T02:38:39.000Z",
+    "conversation_id": 1349184054390714369,
+    "lang": "ko",
+    "author_id": 1158746320321990656,
+    "referenced_tweets": [
+      {
+        "type": "retweeted",
+        "id": 1348910619857063937
+      }
+    ],
+    "possibly_sensitive": false,
+    "entities": {
+      "mentions": [
+        {
+          "start": 3,
+          "end": 16,
+          "username": "janghyeyeong"
+        }
+      ]
+    },
+    "id": 1349184054390714369,
+    "public_metrics": {
+      "retweet_count": 49,
+      "reply_count": 0,
+      "like_count": 0,
+      "quote_count": 0
+    },
+    "source": "Twitter for iPhone",
+    "text": "RT @janghyeyeong: 특별재난연대세는 코로나19 극복을 위해서 위기 상황에서도 소득이 크게 증가했거나 높은 소득이 있는 기업 또는 개인에게 사회연대 차원에서 한시적으로 추가로 과세를 하고, 이를 통해 마련된 재원을 재해예방 및 취약계층 지…"
+  },
+  "includes": {
+    "users": [
+      {
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1346758357479112704/PXB6DunX_normal.jpg",
+        "verified": false,
+        "name": "앤라",
+        "username": "Anne_ra_",
+        "id": 1158746320321990656
+      },
+      {
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1272051306023186432/iNA8sNaj_normal.jpg",
+        "verified": true,
+        "name": "장혜영",
+        "username": "janghyeyeong",
+        "id": 1242741961171202048
+      }
+    ],
+    "tweets": [
+      {
+        "created_at": "2021-01-12T08:32:07.000Z",
+        "conversation_id": 1348910614404427776,
+        "author_id": 1242741961171202048,
+        "referenced_tweets": [
+          {
+            "type": "replied_to",
+            "id": 1348910618359816192
+          }
+        ],
+        "possibly_sensitive": false,
+        "id": 1348910619857063937,
+        "public_metrics": {
+          "retweet_count": 49,
+          "reply_count": 1,
+          "like_count": 33,
+          "quote_count": 0
+        },
+        "source": "Twitter for iPhone",
+        "in_reply_to_user_id": 1242741961171202048,
+        "text": "특별재난연대세는 코로나19 극복을 위해서 위기 상황에서도 소득이 크게 증가했거나 높은 소득이 있는 기업 또는 개인에게 사회연대 차원에서 한시적으로 추가로 과세를 하고, 이를 통해 마련된 재원을 재해예방 및 취약계층 지원 또는 실업 대응 등에 사용하도록 한다는 내용입니다."
+      }
+    ]
+  }
+}
+]
