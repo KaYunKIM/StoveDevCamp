@@ -1,0 +1,64 @@
+2021-01-31 10:26:31
+per 5 seconds: 154  total count: 154
+2021-01-31 10:26:31
+per 5 seconds: 164  total count: 318
+2021-01-31 10:26:31
+per 5 seconds: 156  total count: 474
+2021-01-31 10:26:31
+per 5 seconds: 171  total count: 645
+2021-01-31 10:26:31
+per 5 seconds: 162  total count: 807
+2021-01-31 10:40:34
+per 5 seconds: 114  total count: 114
+2021-01-31 10:40:41
+per 5 seconds: 157  total count: 271
+2021-01-31 10:40:46
+per 5 seconds: 138  total count: 409
+2021-01-31 10:40:50
+per 5 seconds: 141  total count: 550
+2021-01-31 10:40:53
+per 5 seconds: 130  total count: 680
+2021-01-31 10:40:56
+per 5 seconds: 135  total count: 815
+2021-01-31 10:41:00
+per 5 seconds: 149  total count: 964
+2021-01-31 10:50:06
+per 5 seconds: 65  total count: 65
+2021-01-31 10:50:13
+per 5 seconds: 162  total count: 227
+2021-01-31 10:50:18
+per 5 seconds: 156  total count: 383
+2021-01-31 10:50:22
+per 5 seconds: 153  total count: 536
+2021-01-31 10:50:25
+per 5 seconds: 127  total count: 663
+2021-01-31 10:50:32
+per 5 seconds: 103  total count: 766
+2021-01-31 10:50:37
+per 5 seconds: 180  total count: 946
+2021-01-31 10:50:42
+per 5 seconds: 142  total count: 1088
+2021-01-31 10:50:47
+per 5 seconds: 15  total count: 1103
+2021-01-31 10:52:16
+per 5 seconds: 32  total count: 32
+2021-01-31 10:52:23
+per 5 seconds: 154  total count: 186
+2021-01-31 10:52:27
+per 5 seconds: 150  total count: 336
+2021-01-31 10:52:32
+per 5 seconds: 133  total count: 469
+2021-01-31 10:52:36
+per 5 seconds: 146  total count: 615
+2021-01-31 10:52:39
+per 5 seconds: 171  total count: 786
+2021-01-31 10:52:43
+per 5 seconds: 143  total count: 929
+2021-01-31 10:52:46
+per 5 seconds: 154  total count: 1083
+2021-01-31 10:52:48
+per 5 seconds: 170  total count: 1253
+2021-01-31 10:52:52
+per 5 seconds: 160  total count: 1413
+2021-01-31 10:52:57
+per 5 seconds: 14  total count: 1427
