@@ -16,7 +16,7 @@ import json, time, datetime, copy
 import os
 os.environ['PYSPARK_SUBMIT_ARGS'] = \
     '--packages com.datastax.spark:spark-cassandra-connector_2.11:2.4.1' \
-    ' --conf spark.cassandra.connection.host=10.250.93.207:9042 pyspark-shell'
+    ' --conf spark.cassandra.connection.host=localhost:port pyspark-shell'
 
 def tweet_data(table, keyspace, datehour):
     global sqlContext, DB_topic
@@ -34,8 +34,8 @@ sc = SparkContext(appName="Trend Analysis")
 sqlContext = SQLContext(sc)
 ss = SparkSession.builder \
     .appName('SparkCassandraApp') \
-    .config('spark.cassandra.connection.host', '10.250.93.207') \
-    .config('spark.cassandra.connection.port', '9042') \
+    .config('spark.cassandra.connection.host', 'localhost') \
+    .config('spark.cassandra.connection.port', 'port') \
     .config('spark.cassandra.output.consistency.level', 'ONE') \
     .getOrCreate()
 

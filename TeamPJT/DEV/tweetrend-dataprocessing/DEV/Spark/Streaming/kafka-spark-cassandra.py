@@ -15,7 +15,7 @@ import json
 import os
 os.environ['PYSPARK_SUBMIT_ARGS'] = \
     '--packages com.datastax.spark:spark-cassandra-connector_2.11:2.4.1' \
-    ' --conf spark.cassandra.connection.host=10.250.93.207:9042 pyspark-shell'
+    ' --conf spark.cassandra.connection.host=localhost:port pyspark-shell'
 
 if __name__=="__main__":
     cnt_in = 0
@@ -89,13 +89,13 @@ if __name__=="__main__":
     ssc = StreamingContext(sc,5)  ## 5 = no.of seconds
     ss = SparkSession.builder \
         .appName('SparkCassandraApp') \
-        .config('spark.cassandra.connection.host', '10.250.93.207') \
-        .config('spark.cassandra.connection.port', '9042') \
+        .config('spark.cassandra.connection.host', 'localhost') \
+        .config('spark.cassandra.connection.port', 'port') \
         .config('spark.cassandra.output.consistency.level', 'ONE') \
         .getOrCreate()
 
     message = KafkaUtils.createDirectStream(ssc, topics=["covid_kor"],
-                kafkaParams={"metadata.broker.list":"10.250.93.4:9092"})
+                kafkaParams={"metadata.broker.list":"localhost:port"})
 
     try: 
         message = message.map(lambda x: json.loads(x[1]))
