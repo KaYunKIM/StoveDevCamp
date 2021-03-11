@@ -54,10 +54,10 @@ if __name__=="__main__":
             ## JSON reshape return
             reshaped_json = reshape.reshape(df,'covid-19')   ## json(list), topic
             
-            ## convert list to RDD
+            ## convert list to RDD to Json
             new_df = sc.parallelize(reshaped_json).map(lambda x: json.dumps(x))
 
-            ## convert RDD to Dataframe
+            ## convert Json to Dataframe
             new_df = ss.read.json(new_df)
 
             new_df.show(3)
