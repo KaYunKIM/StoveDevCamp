@@ -22,8 +22,9 @@ if __name__=="__main__":
     cnt_out = 0
     
     def handle_rdd(rdd):
+        global ss, now, cnt_in, cnt_out
+
         if not rdd.isEmpty():
-            global ss, now, cnt_in, cnt_out
             
             data_in = "data_in.txt"
             data_out = "data_out.txt"
